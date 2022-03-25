@@ -140,7 +140,7 @@ PHP, Laravel and Codeignitor Developer
 
 <div class="dropdown-toggle" data-toggle="dropdown">  
       
-<a href="https://nikhilbhalerao.com/"  target="_blank"><img src="uploadImage/Profile/profile.jpg" class="img-radius" alt="User-Profile-Image"/></a><span>
+<a href="#"  target="_blank">Loged as,<img src="uploadImage/Profile/profile.jpg" class="img-radius" alt="User-Profile-Image"/></a><span>
 </span>
 
 
@@ -364,12 +364,7 @@ PHP, Laravel and Codeignitor Developer
 </ul>
 </li>
 <?php }?>
-<li class="">
-<a href="about_me.php">
-<span class="pcoded-micon"><i class="feather icon-info"></i></span>
-<span class="pcoded-mtext">Know More</span>
-</a>
-</li>
+
 <li class="">
 <a href="logout.php">
 <span class="pcoded-micon"><i class="feather icon-home"></i></span>
