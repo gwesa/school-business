@@ -19,7 +19,7 @@ $row1=$result1->fetch_assoc();
 $result2=$conn->query($sql2);
    $row2=$result2->fetch_assoc();
 
-$sql3="select count(id) as id4 from sales1 where delete_status='0' ";
+$sql3="SELECT count(id) as id4 FROM sales where delete_status='0' ";
 $result3=$conn->query($sql3);
    $row3=$result3->fetch_assoc();
 
@@ -146,7 +146,7 @@ $sql6="SELECT s.id,s.qty,s.price,s.date,p.name
        <div class="panel-heading">
          <strong>
            <span class="glyphicon glyphicon-th"></span>
-           <span>Highest Saleing Products</span>
+           <span>Highest Saleing Books</span>
          </strong>
        </div>
        <div class="table-responsive dt-responsive">

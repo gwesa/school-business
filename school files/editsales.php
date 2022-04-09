@@ -16,12 +16,12 @@ $res_insert = $conn->query($sql_insert);
  $last_billing_id =  mysqli_insert_id($conn);
 $billingid = $last_billing_id;
 
-$q2 = "DELETE from sales_product where sales_id = '".$_GET['id']."'";
+$q2 = "DELETE from sales_book where sales_id = '".$_GET['id']."'";
 $conn->query($q2);
 
 $service = count($_POST['select_services']);
  for($i=0;$i<$service;$i++){   
-  $sql_service = "insert into sales_product(sales_id,product_id, quantity, unit_price, total)values('$billingid','$select_services[$i]','$quantity[$i]','$unit_price[$i]','$total[$i]')"; 
+  $sql_service = "insert into sales_book(sales_id,product_id, quantity, unit_price, total)values('$billingid','$select_services[$i]','$quantity[$i]','$unit_price[$i]','$total[$i]')"; 
  
  $conn->query($sql_service);
 }
@@ -31,7 +31,7 @@ $service = count($_POST['select_services']);
 </script>
 <?php
 }
-$sql= "SELECT * from sales_product where sales_id='".$_GET["id"]."'";
+$sql= "SELECT * from sales_book where sales_id='".$_GET["id"]."'";
 $items=$conn->query($sql);
 
 $que_billing="select * from sales where id='".$_GET["id"]."'";
@@ -134,7 +134,7 @@ $record=mysqli_fetch_array($query_billing);
                                                    <select name="select_services[]" class="form-control select_services">
                                      <option value="">--SelectProduct--</option>
                                     <?php
-                                    $sql= "SELECT * from  products where delete_status='0' ORDER BY id DESC";
+                                    $sql= "SELECT * from  books where delete_status='0' ORDER BY id DESC";
                                       $result=$conn->query($sql);
                                    foreach ($result as $r_service) { ?>  
                                         <option value="<?php echo $r_service['id'];?>" <?php if($products['product_id']==$r_service['id']){ echo "selected"; } ?>><?php echo $r_service['name'];?></option>
@@ -169,7 +169,7 @@ $record=mysqli_fetch_array($query_billing);
                                    <select name="select_services[]" class="form-control select_services">
                                      <option value="">--SelectProduct--</option>
                                     <?php
-                                    $sql= "SELECT * from  products where delete_status='0' ORDER BY id DESC";
+                                    $sql= "SELECT * from  books where delete_status='0' ORDER BY id DESC";
                                       $result=$conn->query($sql);
                                    foreach ($result as $r_service) { ?>  
                                         <option value="<?php echo $r_service['id'];?>"<?php if($products['product_id']==$r_service['id']){ echo "selected"; } ?>><?php echo $r_service['name'];?></option>
@@ -217,7 +217,7 @@ $record=mysqli_fetch_array($query_billing);
                                    <select name="select_services[]" class="form-control select_services">
                                      <option value="">--SelectProduct--</option>
                                     <?php
-                                    $sql= "SELECT * from  products where delete_status='0' ORDER BY id DESC";
+                                    $sql= "SELECT * from  books where delete_status='0' ORDER BY id DESC";
                                       $result=$conn->query($sql);
                                    foreach ($result as $r_service) { ?>  
                                         <option value="<?php echo $r_service['id'];?>"><?php echo $r_service['name'];?></option>

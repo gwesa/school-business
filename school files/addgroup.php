@@ -91,13 +91,9 @@ $result=$conn->query($sql);
                                            </form> 
 </div>
 </div>
-
-
-</div>
-
 </div>
 </div>
-
+</div>
 <div id="#">
 </div>
 </div>
@@ -107,6 +103,3 @@ $result=$conn->query($sql);
 </div>
 </div>
 <?php include("footer.php"); ?>
-
-<!--  Author Name: Nikhil Bhalerao - www.nikhilbhalerao.com 
-PHP, Laravel and Codeignitor Developer -->

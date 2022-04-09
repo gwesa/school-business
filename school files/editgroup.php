@@ -48,7 +48,7 @@ include("connect.php");
 
 <div class="card">
 <div class="card-block">
-<form role="form" action="editgroup2.php?id=<?php echo $_GET['id'];?>">
+<form role="form" action="editgroup2.php?id=<?php echo $_GET['id'];?>" enctype="multipart/form-data">
                                                 <div class="row">
                                                      <div class="col-lg-6">
                                                 <div class="form-group">
@@ -69,8 +69,6 @@ include("connect.php");
                                                             <input type="radio" name="group_status"  value="1" <?php if($result['group_status']=='1'){echo "checked";}?> >Active
                                                         </label>
                                                     </div>
-                                                
-                                                
 
                                                     <div class="radio">
                                                         <label>
