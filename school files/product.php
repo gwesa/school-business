@@ -89,7 +89,7 @@ $sql="SELECT * from media where id='".$row['media_id']." '";
         <td><?php echo $row['date']; ?></td>
         
         <td>    
-            <a href="editproduct.php?id=<?php echo $row['id']?>"><input id="edit" type="submit" name="edit" value="Edit" class="btn btn-success" /></a>
+          <a href="editproduct.php?id=<?php echo $row['id']?>"><input id="edit" type="submit" name="edit" value="Edit" class="btn btn-success" /></a>
           <a href="deleteproduct.php?id=<?php echo $row['id']?>" onclick="return confirm('Are you sure to delete this record?')">  <input id="delete" type="submit" name="delete" value="Delete" class="btn btn-danger" /></a>
         </td>
         </tr>
